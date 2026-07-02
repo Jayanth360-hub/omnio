@@ -1,0 +1,460 @@
+/* ========================================
+   HEALTHCARE WEBSITE PREMIUM ANIMATIONS
+   ======================================== */
+
+/* Global Animation Settings */
+* {
+  --animation-duration: 0.6s;
+  --animation-timing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --animation-timing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --animation-timing-ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========================================
+   KEYFRAME ANIMATIONS
+   ======================================== */
+
+/* Fade In - Basic */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fade In Up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Down */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Left */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade In Right */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scale In */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Scale In with Bounce */
+@keyframes scaleInBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Zoom In */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Slide Up */
+@keyframes slideUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Slide Down */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Slide Left */
+@keyframes slideLeft {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Slide Right */
+@keyframes slideRight {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Count Animation */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Glow Effect */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(27, 122, 140, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(27, 122, 140, 0.6);
+  }
+}
+
+/* Pulse */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Float */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Rotate In */
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-10deg) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
+
+/* ========================================
+   UTILITY ANIMATION CLASSES
+   ======================================== */
+
+/* Fade In */
+.animate-fade-in {
+  animation: fadeIn var(--animation-duration) var(--animation-timing) forwards;
+}
+
+/* Fade In Up */
+.animate-fade-in-up {
+  animation: fadeInUp var(--animation-duration) var(--animation-timing) forwards;
+}
+
+/* Fade In Down */
+.animate-fade-in-down {
+  animation: fadeInDown var(--animation-duration) var(--animation-timing) forwards;
+}
+
+/* Fade In Left */
+.animate-fade-in-left {
+  animation: fadeInLeft var(--animation-duration) var(--animation-timing) forwards;
+}
+
+/* Fade In Right */
+.animate-fade-in-right {
+  animation: fadeInRight var(--animation-duration) var(--animation-timing) forwards;
+}
+
+/* Scale In */
+.animate-scale-in {
+  animation: scaleIn var(--animation-duration) var(--animation-timing) forwards;
+}
+
+/* Scale In Bounce */
+.animate-scale-in-bounce {
+  animation: scaleInBounce var(--animation-duration) var(--animation-timing-bounce) forwards;
+}
+
+/* Zoom In */
+.animate-zoom-in {
+  animation: zoomIn var(--animation-duration) var(--animation-timing) forwards;
+}
+
+/* Slide Up */
+.animate-slide-up {
+  animation: slideUp var(--animation-duration) var(--animation-timing) forwards;
+}
+
+/* Slide Down */
+.animate-slide-down {
+  animation: slideDown var(--animation-duration) var(--animation-timing) forwards;
+}
+
+/* Slide Left */
+.animate-slide-left {
+  animation: slideLeft var(--animation-duration) var(--animation-timing) forwards;
+}
+
+/* Slide Right */
+.animate-slide-right {
+  animation: slideRight var(--animation-duration) var(--animation-timing) forwards;
+}
+
+/* Glow */
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Pulse */
+.animate-pulse-soft {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Float */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Rotate In */
+.animate-rotate-in {
+  animation: rotateIn var(--animation-duration) var(--animation-timing) forwards;
+}
+
+/* ========================================
+   STAGGER DELAYS
+   ======================================== */
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+.stagger-7 { animation-delay: 0.7s; }
+.stagger-8 { animation-delay: 0.8s; }
+.stagger-9 { animation-delay: 0.9s; }
+.stagger-10 { animation-delay: 1s; }
+
+/* ========================================
+   SCROLL-TRIGGERED ANIMATIONS
+   ======================================== */
+
+/* Initially hidden for scroll animations */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.scroll-animate.in-view {
+  animation: fadeInUp var(--animation-duration) var(--animation-timing) forwards;
+}
+
+.scroll-animate-stagger-1.in-view { animation-delay: 0.1s; }
+.scroll-animate-stagger-2.in-view { animation-delay: 0.2s; }
+.scroll-animate-stagger-3.in-view { animation-delay: 0.3s; }
+.scroll-animate-stagger-4.in-view { animation-delay: 0.4s; }
+.scroll-animate-stagger-5.in-view { animation-delay: 0.5s; }
+.scroll-animate-stagger-6.in-view { animation-delay: 0.6s; }
+
+/* ========================================
+   COMPONENT-SPECIFIC ANIMATIONS
+   ======================================== */
+
+/* Hero Section */
+.hero-content {
+  animation: fadeInUp 0.8s var(--animation-timing) forwards;
+}
+
+.hero-image {
+  animation: fadeInRight 0.8s var(--animation-timing) 0.2s forwards;
+  opacity: 0;
+}
+
+/* Cards */
+.card-animate {
+  animation: scaleIn var(--animation-duration) var(--animation-timing) forwards;
+  opacity: 0;
+}
+
+.card-hover {
+  transition: all 0.3s var(--animation-timing-ease);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Icons */
+.icon-animate {
+  animation: scaleInBounce var(--animation-duration) var(--animation-timing-bounce) forwards;
+  opacity: 0;
+}
+
+/* Buttons */
+.btn-animate {
+  transition: all 0.3s var(--animation-timing-ease);
+}
+
+.btn-animate:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(27, 122, 140, 0.2);
+}
+
+.btn-animate:active {
+  transform: scale(0.98);
+}
+
+/* Images */
+.img-animate {
+  animation: fadeIn 0.8s var(--animation-timing) forwards;
+  opacity: 0;
+}
+
+/* Text */
+.text-animate {
+  animation: fadeInUp 0.6s var(--animation-timing) forwards;
+  opacity: 0;
+}
+
+/* ========================================
+   PARALLAX EFFECTS
+   ======================================== */
+
+.parallax-slow {
+  transition: transform 0.1s ease-out;
+}
+
+.parallax-medium {
+  transition: transform 0.2s ease-out;
+}
+
+.parallax-fast {
+  transition: transform 0.05s ease-out;
+}
+
+/* ========================================
+   SMOOTH TRANSITIONS
+   ======================================== */
+
+/* Global smooth transitions */
+button,
+a,
+input,
+textarea,
+select {
+  transition: all 0.2s var(--animation-timing-ease);
+}
+
+/* ========================================
+   MEDIA QUERIES - REDUCE MOTION
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ========================================
+   RESPONSIVE ANIMATIONS
+   ======================================== */
+
+@media (max-width: 768px) {
+  .animate-fade-in-left,
+  .animate-fade-in-right,
+  .animate-slide-left,
+  .animate-slide-right {
+    animation: fadeInUp var(--animation-duration) var(--animation-timing) forwards !important;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+  }
+
+  .btn-animate:hover {
+    transform: scale(1.02);
+  }
+}

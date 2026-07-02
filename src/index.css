@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Brand teal scale, sampled from source design */
+  --color-brand-50: #EAF6F8;
+  --color-brand-100: #D3EEF1;
+  --color-brand-300: #7FCBD6;
+  --color-brand-500: #4CACBA;
+  --color-brand-600: #15879A;
+  --color-brand-700: #0E6C7C;
+  --color-brand-800: #0B4A4F;
+  --color-brand-900: #073A40;
+  --color-brand-950: #06525B;
+
+  /* Gold/amber accent for CTAs */
+  --color-gold-400: #F7C53D;
+  --color-gold-500: #F5B915;
+  --color-gold-600: #DE9F06;
+
+  /* Neutral ink + soft backgrounds */
+  --color-ink-900: #15252A;
+  --color-ink-600: #4D6166;
+  --color-ink-400: #7C8E92;
+  --color-soft-50: #F6FAFB;
+  --color-soft-100: #EAF4F6;
+  --color-soft-200: #DCEDEF;
+
+  /* Exact splash-screen background, sampled from the reference video */
+  --color-splash: #E1EAF1;
+
+  --font-display: "Plus Jakarta Sans", "Inter", sans-serif;
+  --font-body: "Inter", "Plus Jakarta Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink-900);
+  background-color: #ffffff;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+}
+
+/* =============================================
+   PRELOADER
+   ============================================= */
+@keyframes logo-pop {
+  0% { opacity: 0; transform: scale(0.35); }
+  60% { opacity: 1; transform: scale(1.08); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.animate-logo-pop {
+  animation: logo-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* =============================================
+   SCROLL-REVEAL (used by <Reveal>)
+   ============================================= */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+.reveal-init {
+  opacity: 0;
+}
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+/* =============================================
+   NAVBAR SLIDE-DOWN
+   ============================================= */
+@keyframes nav-slide-down {
+  from { opacity: 0; transform: translateY(-100%); }
+  to   { opacity: 1; transform: translateY(0);     }
+}
+.animate-nav-slide-down {
+  animation: nav-slide-down 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* =============================================
+   HERO ANIMATIONS
+   ============================================= */
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(36px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+@keyframes hero-fade-right {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0);    }
+}
+@keyframes hero-zoom-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1);    }
+}
+
+.hero-title {
+  opacity: 0;
+  animation: hero-fade-up 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
+}
+.hero-subtitle {
+  opacity: 0;
+  animation: hero-fade-up 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.38s both;
+}
+.hero-search {
+  opacity: 0;
+  animation: hero-zoom-in 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.55s both;
+}
+.hero-image-wrap {
+  opacity: 0;
+  animation: hero-fade-right 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s both;
+}
+
+/* =============================================
+   STAGGER-REVEAL (used by Specialties, WhyChooseUs, Partners, CTABand)
+   ============================================= */
+.stagger-item {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.stagger-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide-in from left variant */
+.stagger-item-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.stagger-item-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide-in from right variant */
+.stagger-item-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.stagger-item-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scale-in variant for logos / small items */
+.stagger-item-scale {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.5s cubic-bezier(0.34, 1.2, 0.64, 1);
+}
+.stagger-item-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Section heading reveal */
+.section-heading {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.section-heading.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =============================================
+   FLOAT (pixel grid decorations)
+   ============================================= */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* =============================================
+   REDUCED MOTION
+   ============================================= */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal-init { opacity: 1; }
+  .stagger-item,
+  .stagger-item-left,
+  .stagger-item-right,
+  .stagger-item-scale { opacity: 1; transform: none; transition: none; }
+  .hero-title, .hero-subtitle, .hero-search, .hero-image-wrap { opacity: 1; animation: none; }
+  .section-heading { opacity: 1; transform: none; transition: none; }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
